@@ -46,7 +46,6 @@ html,body{height:100%;overflow:hidden;background:#fff;}
 .login-links{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:18px;}
 .login-links a{color:var(--g);font-size:15px;text-decoration:none;}
 #clave-input::-ms-reveal{display:none;}
-#btn-entrar.active-btn{background:var(--g) !important;color:#fff !important;}
 .login-quick{padding:16px 16px 32px;border-top:1px solid #f0f0f0;}
 .lq-dots{display:flex;justify-content:center;gap:6px;margin-bottom:14px;}
 .lq-dot{width:8px;height:8px;border-radius:50%;background:#ccc;}
@@ -360,7 +359,7 @@ html,body{height:100%;overflow:hidden;background:#fff;}
         </svg>
       </div>
     </div>
-    <button class="btn-g" onclick="doLogin()" style="background:#cdd5da;color:#666;" id="btn-entrar">Entrar</button>
+    <button class="btn-g" onclick="doLogin()" id="btn-entrar">Entrar</button>
     <div id="clave-error" style="color:#e53935;font-size:13px;margin-top:8px;display:none;">Clave incorrecta. Inténtalo de nuevo.</div>
     <div class="login-links">
       <a href="#" onclick="showT('Cambiar clave');return false;">Cambia tu Clave Internet</a>
@@ -1500,18 +1499,6 @@ window.addEventListener('load',()=>{
     document.getElementById('splash').classList.remove('active');
     document.getElementById('login').classList.add('active');
   },2000);
-  // Activar botón Entrar cuando el usuario escribe la clave
-  const inp = document.getElementById('clave-input');
-  const btn = document.getElementById('btn-entrar');
-  if(inp && btn){
-    inp.addEventListener('input',()=>{
-      if(inp.value.length > 0){
-        btn.classList.add('active-btn');
-      } else {
-        btn.classList.remove('active-btn');
-      }
-    });
-  }
 });
 if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
 </script>
