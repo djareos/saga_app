@@ -475,7 +475,7 @@ html,body{height:100%;overflow:hidden;background:#fff;}
         </div>
         <div class="pcb">
           <div class="pcb-lbl">Tienes en tu cuenta</div>
-          <div class="pcb-amt sh">S/1,888.50</div>
+          <div class="pcb-amt sh">S/400.69</div>
         </div>
       </div>
       <!-- PRÉSTAMO -->
@@ -812,14 +812,14 @@ html,body{height:100%;overflow:hidden;background:#fff;}
       <div class="bal-row">
         <div class="bal-col">
           <div class="bal-col-lbl">Utilizado</div>
-          <div class="bal-col-val sh">S/ 11,921.41</div>
+          <div class="bal-col-val sh">S/ 10,433.65</div>
         </div>
         <div class="bal-col" style="text-align:right;">
           <div class="bal-col-lbl">Disponible</div>
-          <div class="bal-col-val sh" style="color:var(--gd);">S/ 5,078.59</div>
+          <div class="bal-col-val sh" style="color:var(--gd);">S/ 6,566.35</div>
         </div>
       </div>
-      <div class="bal-bar"><div class="bal-bar-fill" style="width:70.13%"></div></div>
+      <div class="bal-bar"><div class="bal-bar-fill" style="width:61.38%"></div></div>
       <!-- Tabs -->
       <div class="tabs-row">
         <div class="tab on" id="t1" onclick="swTab('m')">Últimos movimientos</div>
@@ -828,6 +828,15 @@ html,body{height:100%;overflow:hidden;background:#fff;}
       <!-- Movimientos -->
       <div id="pm" class="movs">
         <div class="mov-periodo"><span>Proxima facturación</span><strong>20/08/2026</strong></div>
+        <div class="mov-dg">Hoy</div>
+        <div class="mov-row" onclick="showT('PAGO MOBILE')">
+          <div class="mov-left"><div class="mov-desc">PAGO MOBILE</div></div>
+          <div class="mov-right"><div class="mov-amt g sh">S/ 1,487.81</div><div class="mov-chevron">›</div></div>
+        </div>
+        <div class="mov-row" onclick="showT('ITF PAGOS MOBILE')">
+          <div class="mov-left"><div class="mov-desc">ITF PAGOS MOBILE</div></div>
+          <div class="mov-right"><div class="mov-amt k">S/ 0.05</div><div class="mov-chevron">›</div></div>
+        </div>
         <div class="mov-dg">Miércoles 22 de julio</div>
         <div class="mov-row" onclick="showT('SEG SEGURA PACIFICO ESTABLECIMIENTO')">
           <div class="mov-left">
@@ -916,18 +925,24 @@ html,body{height:100%;overflow:hidden;background:#fff;}
   </div>
   <div class="sb">
     <div class="cuenta-top">
-      <div class="cuenta-main-amt sh">S/ 1,888.50</div>
+      <div class="cuenta-main-amt sh">S/ 400.69</div>
       <div class="cuenta-main-lbl">Saldo disponible</div>
     </div>
     <div class="cuenta-2col">
-      <div><div class="c2-lbl">Saldo disponible</div><div class="c2-val sh">S/ 1,888.50</div></div>
-      <div><div class="c2-lbl">Saldo contable</div><div class="c2-val sh">S/ 1,888.50</div></div>
+      <div><div class="c2-lbl">Saldo disponible</div><div class="c2-val sh">S/ 400.69</div></div>
+      <div><div class="c2-lbl">Saldo contable</div><div class="c2-val sh">S/ 400.69</div></div>
     </div>
     <div class="cci-block">
       <div class="cci-lbl">CCI</div>
       <div class="cci-val">05482882828028654793</div>
     </div>
     <div class="mov-section-hdr">ÚLTIMOS 30 MOVIMIENTOS</div>
+    <div class="mc-row" onclick="showT('Cargo por pago tarjeta crédito')">
+      <div class="mc-date"><div class="mc-day">15</div><div class="mc-month">Ago</div></div>
+      <div class="mc-divider"></div>
+      <div class="mc-desc"><div class="mc-title k">CARGO POR PAGO TARJETA CREDITO 1901 Mobile</div></div>
+      <div class="mc-amt k sh">- S/ 1,487.81</div>
+    </div>
     <div class="mc-row" onclick="showT('Transferencia enviada')">
       <div class="mc-date"><div class="mc-day">15</div><div class="mc-month">Jun</div></div>
       <div class="mc-divider"></div>
@@ -1322,7 +1337,7 @@ html,body{height:100%;overflow:hidden;background:#fff;}
       <div class="prc-source" onclick="showT('Cambiar forma de pago')">
         <div>
           <div class="prc-src-name">Cta Banco Falabella</div>
-          <div class="prc-src-sub sh">828280286547 &nbsp;·&nbsp; S/ 1,888.50 Disponible</div>
+          <div class="prc-src-sub sh">828280286547 &nbsp;·&nbsp; S/ 400.69 Disponible</div>
         </div>
         <span style="font-size:20px;color:#ccc;">⌄</span>
       </div>
@@ -1345,7 +1360,7 @@ html,body{height:100%;overflow:hidden;background:#fff;}
         <div class="tr-amt-lbl">Monto a transferir</div>
         <div class="tr-amt-val" id="trd">S/ 0.00</div>
       </div>
-      <div class="tr-field"><label>Cuenta origen</label><select><option>Cta Banco Falabella · S/ 1,888.50</option><option>CMR VISA •••• 1901</option></select></div>
+      <div class="tr-field"><label>Cuenta origen</label><select><option>Cta Banco Falabella · S/ 400.69</option><option>CMR VISA •••• 1901</option></select></div>
       <div class="tr-field"><label>Banco destino</label><select><option>Banco Falabella</option><option>BCP</option><option>Interbank</option><option>BBVA</option><option>Scotiabank</option><option>Yape</option><option>Plin</option></select></div>
       <div class="tr-field"><label>Número de cuenta / CCI</label><input type="tel" placeholder="Ingresa número de cuenta"/></div>
       <div class="tr-field"><label>Monto (S/)</label><input type="number" placeholder="0.00" oninput="document.getElementById('trd').textContent='S/ '+(parseFloat(this.value)||0).toFixed(2)"/></div>
